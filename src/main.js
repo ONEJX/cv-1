@@ -1,6 +1,7 @@
 let html = document.querySelector('#demo')
 let style = document.querySelector('#style')
-
+let btn = document.querySelector('#btn')
+let xxx = true
 let string = `/*你好，我叫黑睢
 接下来我要演示一下我的前端功底
 首先我要准备一个div
@@ -49,6 +50,20 @@ let string = `/*你好，我叫黑睢
     background:#fff;
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%, rgba(0,0,0,1) 100%);
 }
+/*
+再加一个旋转控制器
+*/
+@keyframes xxx{
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#div1{
+    animation: 1.5s linear infinite  xxx ;
+}
 `;
 
 let string2 = ''
@@ -73,8 +88,20 @@ let step = () => {
             n += 1
             step()
         }else{
-
+            btn.style.display = 'block'
         }
     },50)
 }
 step()
+
+btn.onclick = () =>{
+    if(xxx){
+        div1.className = 'stop'
+        xxx = !xxx
+        btn.innerHTML = 'run'
+    }else{
+        div1.className = 'run'
+        xxx = !xxx
+        btn.innerHTML = 'stop'
+    }
+}
