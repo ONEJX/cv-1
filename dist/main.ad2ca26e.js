@@ -141,14 +141,14 @@ step();
 
 btn.onclick = function () {
     if (xxx) {
-        div1.className = 'stop';
+        div1.style.animationPlayState = 'paused';
         xxx = !xxx;
         btn.innerHTML = 'run';
     } else {
-        div1.className = 'run';
+        div1.style.animationPlayState = 'running';
         xxx = !xxx;
         btn.innerHTML = 'stop';
     }
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.50511929.map
+//# sourceMappingURL=main.ad2ca26e.map

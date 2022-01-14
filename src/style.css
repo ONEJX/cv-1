@@ -3,12 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-#div1.run{
-    animation-play-state:running;
-}
-#div1.stop{
-    animation-play-state:paused;
-}
 *::before{  
     box-sizing: border-box;
 }
